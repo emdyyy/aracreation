@@ -1,0 +1,54 @@
+---
+import Footer from "../components/Footer.astro"
+import Loader from "../components/Loader.astro"
+import Navbar from "../components/Navbar.astro"
+import QuickActions from "../components/QuickActions.astro"
+import "../styles/global.css"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ara Creation Agency</title>
+    <meta
+      name="description"
+      content="We are Ara Creation, a creative agency based in Switzerland. Shine in your customer's eyes and let your brand stay mighty"
+    />
+    <meta property="og:site_name" content="Ara Creation Agency" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://aracreationagency.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ara Creation Agency" />
+    <meta
+      property="og:description"
+      content="We are Ara Creation, a creative agency based in Switzerland. Shine in your customer's eyes and let your brand stay mighty"
+    />
+    <meta
+      property="og:image"
+      content="https://aracreationagency.com/opengraph-image.png"
+    />
+    <link rel="canonical" href="https://aracreationagency.com" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  </head>
+  <body>
+    <div class="overflow-x-hidden">
+		<Loader/>
+		<QuickActions/>
+      <slot />
+      <Footer/>
+    </div>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

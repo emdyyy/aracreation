@@ -1,11 +1,629 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from "astro:assets";
+import Navbar from "../components/Navbar.astro";
+import LayoutEN from "../layouts/LayoutEN.astro";
+import HeroBG from "../assets/hero-bg.webp";
+import BBWebsite from "../assets/bb-website.webp";
+import BBGiftcard from "../assets/bb-giftcard.webp";
+import TailoredSolutions from "../assets/tailored-solutions.svg";
+import Boxes from "../assets/boxes.svg";
+import BBCards from "../assets/bb-cards.webp";
+import Contact from "../assets/contact.svg";
+import ContactForm from "../components/ContactForm";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<LayoutEN>
+  <header
+    class="full-height flex w-full flex-col items-center overflow-x-hidden"
+  >
+    <Navbar />
+    <Image
+      src={HeroBG}
+      alt="Header image"
+      class="header-image"
+      width="1440"
+      height="1024"
+      loading="lazy"
+      decoding="async"
+    />
+    <div
+      class="mx-auto flex max-w-[850px] flex-col items-center h-full justify-center gap-8 px-5 text-center"
+    >
+      <div
+        class="header-content flex flex-col items-center justify-center gap-8 text-center"
+      >
+        <h1
+          class="font-poppins text-3xl font-bold uppercase tracking-tight md:text-5xl"
+        >
+          Craft success pixel by pixel with Ara Creation—shine, <span
+            class="text-primary-yellow"
+          >
+            save time</span
+          >, and gain customers.
+        </h1>
+        <p class="max-w-[300px]">
+          We are Ara Creation, a creative agency based in Switzerland.
+        </p>
+        <a href="#services" class="text-primary-yellow uppercase"
+          >Discover more</a
+        >
+      </div>
+    </div>
+  </header>
+  <main>
+    <h2
+      class="font-poppins text-2xl font-bold tracking-tight md:text-5xl text-center py-8 md:py-24"
+    >
+      Elevate Your Brand with Our Creative Solutions
+    </h2>
+    <section id="services">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 items-center text-white transition-all duration-500 w-full h-fit"
+        id="tracked-section-container"
+      >
+        <div
+          class="top-0 z-10 h-full w-full items-center bg-[#F1F1F1] block md:sticky md:min-h-[700px]"
+        >
+          <Image
+            src={BBWebsite}
+            alt="Modern web design"
+            class="h-full min-h-[300px] w-full object-cover"
+            width="754"
+            height="414"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div
+          class="mx-auto flex max-w-[600px] flex-col gap-4 px-4 py-24 md:py-8"
+          data-color="#000000"
+          tracked-section
+        >
+          <h2 class="font-poppins text-2xl font-bold uppercase md:text-3xl">
+            WEB DEVELOPMENT & E-COMMERCE
+          </h2>
+          <p>
+            Harness the power of digital innovation with our expertise in web
+            development and e-commerce mastery. From crafting sophisticated
+            websites to optimizing seamless online stores, we empower your brand
+            to thrive in the digital landscape with precision and finesse.
+          </p>
+        </div>
+        <div
+          class="top-0 z-20 h-full w-full bg-[#C59921] block md:sticky md:min-h-[700px]"
+        >
+          <Image
+            src={BBGiftcard}
+            alt="Modern web design"
+            class="h-full min-h-[300px] w-full object-cover"
+            width="720"
+            height="500"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div
+          class="mx-auto flex max-w-[600px] flex-col gap-4 px-4 py-24 md:py-8"
+          data-color="#E1B12C"
+          tracked-section
+        >
+          <h2 class="font-poppins text-2xl font-bold uppercase md:text-3xl">
+            GRAPHIC DESIGN & BRANDING
+          </h2>
+          <p>
+            Forge a distinct identity with our strategic branding and design
+            expertise. From meticulous logo creation to comprehensive visual
+            branding, we sculpt a narrative that resonates with your audience,
+            fostering trust and loyalty that transcends the ordinary.
+          </p>
+        </div>
+        <div
+          class="top-0 z-30 h-full w-full bg-[#153084] block md:sticky md:min-h-[700px]"
+        >
+          <Image
+            src={BBGiftcard}
+            alt="Visual content"
+            class="h-full min-h-[300px] w-full object-cover"
+            width="720"
+            height="500"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div
+          class="mx-auto flex max-w-[600px] flex-col gap-4 px-4 py-24 md:py-8"
+          data-color="#153084"
+          tracked-section
+        >
+          <h2 class="font-poppins text-2xl font-bold uppercase md:text-3xl">
+            VISUAL CONTENT
+          </h2>
+          <p>
+            Unlock the potential of visual storytelling with our creative
+            ingenuity and compelling content creation. From captivating
+            videography to bespoke illustrations, we sculpt narratives that
+            captivate and inspire, fostering meaningful connections that drive
+            engagement and growth.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#F1F1F1] py-12 md:py-32" id="about-us">
+      <div
+        id="counter"
+        class="mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-16 px-5 sm:grid-cols-2 md:grid-cols-4"
+      >
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center opacity-0 translate-y-10 transition-all duration-300"
+        >
+          <h2
+            class="font-poppins text-primary-yellow text-3xl font-bold uppercase md:text-5xl"
+          >
+            32
+          </h2>
+          <p class="text-xl">Completed projects</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center opacity-0 translate-y-10 transition-all duration-500"
+        >
+          <h2
+            class="font-poppins text-primary-yellow text-3xl font-bold uppercase md:text-5xl"
+          >
+            15 min
+          </h2>
+          <p class="text-xl">Average response time</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center opacity-0 translate-y-10 transition-all duration-700"
+        >
+          <h2
+            class="font-poppins text-primary-yellow text-3xl font-bold uppercase md:text-5xl"
+          >
+            98%
+          </h2>
+          <p class="text-xl">Customer satisfaction</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center opacity-0 translate-y-10 transition-all duration-1000"
+        >
+          <h2
+            class="font-poppins text-primary-yellow text-3xl font-bold uppercase md:text-5xl"
+          >
+            10+
+          </h2>
+          <p class="text-xl">Partners around the globe</p>
+        </div>
+      </div>
+    </section>
+    <section class="py-8 md:py-32">
+      <div
+        id="animated-section1"
+        class="mx-auto grid w-full max-w-screen-xl grid-cols-1 items-center gap-12 px-5 py-16 md:grid-cols-2 md:gap-24"
+      >
+        <div
+          class="flex flex-col gap-8 transition-all duration-700 -translate-x-5 opacity-0"
+        >
+          <h2
+            class="font-poppins text-2xl font-bold tracking-tight md:text-3xl"
+          >
+            Solutions tailored to your needs
+          </h2>
+          <p>
+            At our agency we create every solution from scratch, tailoring it to
+            the unique characteristics of your business. We do not use
+            ready-made templates. In addition, we guarantee ultra-fast loading
+            speed thanks to our partners top servers. Your site loads in a
+            flash, without compromise.
+          </p>
+          <a href="#contact"
+            ><button
+              class="bg-primary-yellow hover:bg-primary-blue w-full min-w-[150px] px-5 py-4 transition-all duration-300 hover:text-white md:w-auto"
+              >Get a quote</button
+            ></a
+          >
+        </div>
+        <Image
+          src={TailoredSolutions}
+          alt="Tailored solutions"
+          class="order-first mx-auto md:order-none transition-all duration-700 translate-x-5 opacity-0"
+          width="398"
+          height="300"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </section>
+    <section class="py-5 md:py-32 w-full py-16 bg-primary-yellow text-center">
+      <h2
+        id="heading1"
+        class="font-poppins text-3xl font-bold uppercase tracking-tight md:text-5xl max-w-screen-xl mx-auto text-center px-5 opacity-0 translate-y-5 transition-all duration-700"
+      >
+        Trust Ara Creation's magic for a <span class="text-white">
+          standout
+        </span>brand, attracting customers effortlessly.
+      </h2>
+    </section>
+    <section class="bg-[#F1F1F1] py-8 md:py-32">
+      <div
+        id="animated-section2"
+        class="mx-auto grid w-full max-w-screen-xl grid-cols-1 items-center gap-12 px-5 py-16 md:grid-cols-2 md:gap-24"
+      >
+        <Image
+          src={Boxes}
+          alt="Delivery of services"
+          class="mx-auto transition-all duration-700 -translate-x-5 opacity-0"
+          width="270"
+          height="300"
+          loading="lazy"
+          decoding="async"
+        />
+        <div
+          class="flex flex-col gap-8 transition-all duration-700 translate-x-5 opacity-0"
+        >
+          <h2
+            class="font-poppins text-2xl font-bold tracking-tight md:text-3xl"
+          >
+            Highest quality of delivered services
+          </h2>
+          <p>
+            We collaborate with companies from across the globe that come from
+            different backgrounds related to building and developing the brand
+            image of companies of all sizes. That's why we perfectly complement
+            each other and ensure the delivery of top quality services.
+          </p>
+          <a href="#contact"
+            ><button
+              class="bg-primary-yellow hover:bg-primary-blue w-full min-w-[150px] px-5 py-4 transition-all duration-300 hover:text-white md:w-auto"
+              >Become a partner</button
+            ></a
+          >
+        </div>
+      </div>
+    </section>
+  <section class="py-8 md:py-32 animated-section">
+    <div class="mx-auto w-full max-w-screen-xl px-5 py-16">
+      <h2 class="font-poppins text-2xl font-bold tracking-tight md:text-3xl">
+        See what our customers have to say
+      </h2>
+      <div
+        class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-16"
+        id="feedback-cards"
+      >
+        <div
+          class="flex flex-col gap-8 bg-[#F1F1F1] px-10 py-12 transition-all duration-500 translate-y-10"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            congue felis ac lorem cursus, at efficitur lacus iaculis.Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Nulla congue felis ac
+            lorem cursus, at efficitur lacus iaculis.
+          </p>
+          <div>
+            <p
+              class="font-poppins text-primary-yellow mb-2 text-xl font-bold uppercase"
+            >
+              John Smith
+            </p>
+            <p>CEO & Founder</p>
+            <p>John's Bakery</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-8 bg-[#F1F1F1] px-10 py-12 transition-all duration-700 translate-y-10"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            congue felis ac lorem cursus, at efficitur lacus iaculis.Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Nulla congue felis ac
+            lorem cursus, at efficitur lacus iaculis.
+          </p>
+          <div>
+            <p
+              class="font-poppins text-primary-yellow mb-2 text-xl font-bold uppercase"
+            >
+              Emily Frey
+            </p>
+            <p>CEO</p>
+            <p>Emil Frey Automobile</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-8 bg-[#F1F1F1] px-10 py-12 transition-all duration-1000 translate-y-10"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            congue felis ac lorem cursus, at efficitur lacus iaculis.Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Nulla congue felis ac
+            lorem cursus, at efficitur lacus iaculis.
+          </p>
+          <div>
+            <p
+              class="font-poppins text-primary-yellow mb-2 text-xl font-bold uppercase"
+            >
+              Berisha Asani
+            </p>
+            <p>Founder</p>
+            <p>Papa's Pizza</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#F1F1F1] py-8 md:py-32">
+	<div class="mx-auto w-full max-w-screen-xl px-5 pb-16">
+		  <h2 class="font-poppins text-2xl font-bold tracking-tight md:text-3xl">
+				Our work
+		  </h2>
+		  <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-4 h-96" id="work-cards">
+				<div class="bg-white transition-all duration-500 translate-y-10 h-full w-full"> <Image
+							src={BBCards} alt=""
+							class="object-cover w-full h-full" width="1200" height="630"
+							loading="lazy" decoding="async"> </div>
+				<div class="bg-white transition-all duration-500 translate-y-10 h-full w-full"> <Image
+					src={BBCards} alt=""
+							class="object-cover w-full h-full" width="1200" height="630"
+							loading="lazy" decoding="async"> </div>
+				<div class="bg-white transition-all duration-500 translate-y-10 h-full w-full"> <Image
+					src={BBCards} alt=""
+							class="object-cover w-full h-full" width="1200" height="630"
+							loading="lazy" decoding="async"> </div>
+		  </div>
+	</div>
+</section>
+<section class="py-5 md:py-32 w-full py-16 bg-primary-yellow text-center">
+	<h2 id="heading2"
+		  class="font-poppins text-3xl font-bold uppercase tracking-tight md:text-5xl max-w-screen-xl mx-auto text-center px-5 opacity-0 translate-y-5 transition-all duration-700">
+		  Why Settle for Ordinary? <span class="text-white"> Ara Creation </span> Delivers
+		  Extraordinary.
+	</h2>
+</section>
+<section class="bg-[#F1F1F1] py-8 md:py-32 animated-section">
+    <div class="mx-auto w-full max-w-screen-xl px-5 py-16">
+		<h2 class="font-poppins text-2xl font-bold tracking-tight md:text-3xl">
+                                    Just a few simple steps to fully enjoy our benefits
+		</h2>
+                              <div id="steps" class="mt-16 grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-4">
+                                    <div
+                                          class="flex flex-col gap-8 transition-all duration-300 opacity-0 translate-y-10">
+                                          <p
+                                                class="text-primary-yellow font-poppins border-primary-yellow grid h-24 w-24 items-center self-start rounded-full border border-4 text-center text-5xl font-bold">
+                                                1
+                                          </p>
+                                          <p class="font-poppins text-xl font-bold uppercase tracking-tight">
+                                                Initial briefing
+                                          </p>
+                                          <p>
+                                                We will talk about your goals and preliminarily analyze the scope
+                                                of our cooperation.
+                                          </p>
+                                    </div>
+                                    <div
+                                          class="flex flex-col gap-8 transition-all duration-500 opacity-0 translate-y-10">
+                                          <p
+                                                class="text-primary-yellow font-poppins border-primary-yellow grid h-24 w-24 items-center self-start rounded-full border border-4 text-center text-5xl font-bold">
+                                                2
+                                          </p>
+                                          <p class="font-poppins text-xl font-bold uppercase tracking-tight">
+                                                Concept of Action
+                                          </p>
+                                          <p>
+                                                At this stage, we carefully review the previously discussed
+                                                objectives and gather the necessary information.
+                                          </p>
+                                    </div>
+                                    <div
+                                          class="flex flex-col gap-8 transition-all duration-700 opacity-0 translate-y-10">
+                                          <p
+                                                class="text-primary-yellow font-poppins border-primary-yellow grid h-24 w-24 items-center self-start rounded-full border border-4 text-center text-5xl font-bold">
+                                                3
+                                          </p>
+                                          <p class="font-poppins text-xl font-bold uppercase">
+                                                Start of cooperation
+                                          </p>
+                                          <p>Having a complete set of materials, we start our work.</p>
+                                    </div>
+                                    <div
+                                          class="flex flex-col gap-8 transition-all duration-1000 opacity-0 translate-y-10">
+                                          <p
+                                                class="text-primary-yellow font-poppins border-primary-yellow grid h-24 w-24 items-center self-start rounded-full border border-4 text-center text-5xl font-bold">
+                                                4
+                                          </p>
+                                          <p class="font-poppins text-xl font-bold uppercase tracking-tight">
+                                                Reiteration
+                                          </p>
+                                          <p>
+                                                It may happen that our first drafts don't match your vision, so we
+                                                provide enough rounds of iterations to really get the desired
+                                                result.
+                                          </p>
+                                    </div>
+                              </div>
+                        </div>
+                  </section>
+				  <section class="mx-auto w-full max-w-screen-xl py-24 md:py-32" id="contact">
+					<div class="flex flex-col items-center justify-between gap-12 px-5 md:gap-32 lg:flex-row"
+						  id="contact-form">
+						  <div
+								class="flex w-full flex-col gap-12 opacity-0 -translate-x-5 transition-all duration-700">
+								<h2 class="font-poppins text-2xl font-bold tracking-tight md:text-3xl">
+									  Let's elevate your brand
+								</h2>
+								<div class="flex flex-col gap-3">
+									  <p>
+											Tell us about your business, past marketing efforts and needs, and we
+											will suggest solutions that can bring results to your business.
+									  </p>
+									  <p>
+											We will explain what the possibilities are, how we work and answer all
+											your questions. If you come to the conclusion that they make sense, we
+											will help you implement them. After you fill out the form, we will
+											contact you.
+									  </p>
+								</div> <Image src={Contact} alt="Contact us" loading="lazy"
+									  class="mx-auto py-8" width="317" height="200" decoding="async">
+						  </div>
+						  <div class="opacity-0 translate-x-5 transition-all duration-700 w-full">
+								<ContactForm/>
+						  </div>
+					</div>
+			  </section>
+</main>
+</LayoutEN>
+
+<script>
+  const f = document.querySelectorAll("[tracked-section]"),
+    y = document.getElementById("tracked-section-container"),
+    I = new IntersectionObserver(
+      (o) => {
+        const s = (n: any) => o.every((L) => n.time >= L.time),
+          e = o
+            .find((n) => n.isIntersecting && s(n))
+            ?.target.getAttribute("data-color");
+        e && y && (y.style.backgroundColor = e);
+      },
+      {
+        threshold: 1,
+      }
+    );
+  f.forEach((o) => I.observe(o));
+
+  const i = document.getElementById("counter");
+  i &&
+    new IntersectionObserver(
+      (s) => {
+        if (s[0].isIntersecting)
+          for (let t = 0; t < i.children.length; t++) {
+            const e: any = i.children[t];
+            e.classList.remove("opacity-0"),
+              e.classList.remove("translate-y-10");
+          }
+      },
+      {
+        threshold: 0.75,
+      }
+    ).observe(i);
+  const c = document.getElementById("heading1");
+  c &&
+    new IntersectionObserver(
+      (s) => {
+        s[0].isIntersecting &&
+          (c.classList.remove("opacity-0"),
+          c.classList.remove("translate-y-5"));
+      },
+      {
+        threshold: 0.5,
+      }
+    ).observe(c);
+  const r = document.getElementById("heading2");
+  r &&
+    new IntersectionObserver(
+      (s) => {
+        s[0].isIntersecting &&
+          (r.classList.remove("opacity-0"),
+          r.classList.remove("translate-y-5"));
+      },
+      {
+        threshold: 0.5,
+      }
+    ).observe(r);
+  const a = document.getElementById("animated-section1");
+  a &&
+    new IntersectionObserver(
+      (s) => {
+        if (s[0].isIntersecting) {
+          const t = a.children[0],
+            e = a.children[1];
+
+          t.classList.remove("opacity-0");
+          t.classList.remove("-translate-x-5");
+
+          e.classList.remove("opacity-0");
+          e.classList.remove("translate-x-5");
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    ).observe(a);
+  const l = document.getElementById("animated-section2");
+  l &&
+    new IntersectionObserver(
+      (s) => {
+        if (s[0].isIntersecting) {
+          const t = l.children[0],
+            e = l.children[1];
+
+          t.classList.remove("opacity-0");
+          t.classList.remove("-translate-x-5");
+
+          e.classList.remove("opacity-0");
+          e.classList.remove("translate-x-5");
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    ).observe(l);
+  const d = document.getElementById("contact-form");
+  d &&
+    new IntersectionObserver(
+      (s) => {
+        if (s[0].isIntersecting) {
+          const t = d.children[0],
+            e = d.children[1];
+          t.classList.remove("opacity-0"),
+            t.classList.remove("-translate-x-5"),
+            e.classList.remove("opacity-0"),
+            e.classList.remove("translate-x-5");
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    ).observe(d);
+  const v = document.getElementById("feedback-cards");
+  v &&
+    new IntersectionObserver(
+      (s) => {
+        if (s[0].isIntersecting)
+          for (let t = 0; t < v.children.length; t++) {
+            const e = v.children[t];
+            e.classList.remove("opacity-0"),
+              e.classList.remove("translate-y-10");
+          }
+      },
+      {
+        threshold: 0.75,
+      }
+    ).observe(v);
+  const m = document.getElementById("work-cards");
+  m &&
+    new IntersectionObserver(
+      (s) => {
+        if (s[0].isIntersecting)
+          for (let t = 0; t < m.children.length; t++) {
+            const e = m.children[t];
+            e.classList.remove("opacity-0"),
+              e.classList.remove("translate-y-10");
+          }
+      },
+      {
+        threshold: 0.75,
+      }
+    ).observe(m);
+  const h = document.getElementById("steps");
+  h &&
+    new IntersectionObserver(
+      (s) => {
+        if (s[0].isIntersecting)
+          for (let t = 0; t < h.children.length; t++) {
+            const e = h.children[t];
+            e.classList.remove("opacity-0"),
+              e.classList.remove("translate-y-10");
+          }
+      },
+      {
+        threshold: 0.35,
+      }
+    ).observe(h);
+</script>
