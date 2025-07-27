@@ -1,0 +1,148 @@
+---
+import { Image } from "astro:assets";
+import AraLogo from "../../assets/ara-logo.svg";
+import HamburgerMenu from "../../assets/hamburger-menu.svg";
+import Close from "../../assets/close.svg";
+---
+
+<nav class="w-full px-5">
+  <div
+    class="mx-auto flex h-24 w-full max-w-screen-xl items-center justify-between py-8"
+  >
+    <a href="/de" aria-label="Home" class="h-full md:hidden">
+      <Image
+        src={AraLogo}
+        alt=""
+        class="h-full"
+        width="69"
+        height="53"
+        loading="lazy"
+        decoding="async"
+      /></a
+    >
+    <div class="hidden w-full items-center justify-between md:flex">
+      <a href="/de" aria-label="Home" class="h-full">
+        <Image
+          src={AraLogo}
+          alt=""
+          class="h-full"
+          width="69"
+          height="53"
+          loading="lazy"
+          decoding="async"
+        /></a
+      >
+      <ul class="font-poppins flex gap-12 uppercase">
+        <li>
+          <a href="#services" class="hover:text-primary-yellow"
+            >Dienstleistungen</a
+          >
+        </li>
+        <li>
+          <a href="#about-us" class="hover:text-primary-yellow">Über uns</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-primary-yellow">Kontakt</a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="font-poppins hover:text-primary-yellow uppercase"
+            >Offerte bestellen</a
+          >
+        </li>
+      </ul>
+      <a href="/" class="grid w-fit items-center">
+        <div class="grid h-8 w-8 items-center text-center md:h-12 md:w-12">
+          EN
+        </div>
+      </a>
+    </div>
+    <div class="h-full md:hidden bg-white z-40">
+      <button id="mobile-navbar-toggle" class="h-full"
+        ><Image
+          src={HamburgerMenu}
+          alt=""
+          class="h-full"
+          width="33"
+          height="25"
+          loading="lazy"
+          decoding="async"
+        /></button
+      >
+      <div
+        id="mobile-navbar"
+        class="fixed left-full top-0 h-full w-full bg-white transition-all duration-300"
+      >
+        <div class="full-height flex w-full flex-col px-8 py-12">
+          <div class="flex h-10 items-center justify-between">
+            <a href="/de" aria-label="Home" class="h-full md:hidden">
+              <Image
+                src={AraLogo}
+                alt=""
+                class="h-full"
+                width="69"
+                height="53"
+                loading="lazy"
+                decoding="async"
+              /></a
+            >
+            <button
+              ><Image
+                src={Close}
+                id="mobile-navbar-close"
+                alt=""
+                class="w-8"
+                width="16"
+                height="16"
+                loading="lazy"
+                decoding="async"
+              /></button
+            >
+          </div>
+          <ul
+            class="font-poppins flex h-full w-full flex-col justify-center gap-8 text-3xl uppercase"
+          >
+            <li>
+              <a href="#services" class="hover:text-primary-yellow" nav-button
+                >Dienstleistungen</a
+              >
+            </li>
+            <li>
+              <a href="#about-us" class="hover:text-primary-yellow" nav-button
+                >Über uns</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-primary-yellow" nav-button
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+          <a href="/" class="grid w-fit items-center text-3xl"> EN </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const p = document.getElementById("mobile-navbar-toggle"),
+    u = document.getElementById("mobile-navbar-close"),
+    g = document.getElementById("mobile-navbar"),
+    E = document.querySelectorAll("[nav-button]"),
+    b = () => {
+      (g?.classList.toggle("left-full"), g?.classList.toggle("left-0"));
+    };
+  p?.addEventListener("click", () => {
+    b();
+  });
+  u?.addEventListener("click", () => {
+    b();
+  });
+  E.forEach((o) => {
+    o.addEventListener("click", () => {
+      b();
+    });
+  });
+</script>

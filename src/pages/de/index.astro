@@ -1,8 +1,544 @@
 ---
-import LayoutDE from '../../layouts/LayoutDE.astro';
-
+import { Image } from "astro:assets";
+import HeroBG from "../../assets/hero-bg.webp";
+import BBWebsite from "../../assets/bb-website.webp";
+import BBGiftcard from "../../assets/bb-giftcard.webp";
+import TailoredSolutions from "../../assets/tailored-solutions.svg";
+import Boxes from "../../assets/boxes.svg";
+import BBCards from "../../assets/bb-cards.webp";
+import Contact from "../../assets/contact.svg";
+import ContactFormDE from "../../components/de/ContactFormDE";
+import LayoutDE from "../../layouts/LayoutDE.astro";
+import NavbarDE from "../../components/de/NavbarDE.astro";
 ---
 
 <LayoutDE>
-	
+  <header
+    class="full-height flex w-full flex-col items-center overflow-x-hidden"
+  >
+    <NavbarDE />
+    <Image
+      src={HeroBG}
+      alt="Header image"
+      class="header-image"
+      width="1440"
+      height="1024"
+      loading="lazy"
+      decoding="async"
+    />
+    <div
+      class="mx-auto flex max-w-[850px] flex-col items-center h-full justify-center gap-8 px-5 text-center"
+    >
+      <div
+        class="header-content flex flex-col items-center justify-center gap-8 text-center"
+      >
+        <h1
+          class="font-poppins text-3xl font-bold uppercase tracking-tight md:text-5xl"
+        >
+          MIT ARA CREATION GESTALTEN SIE DEN ERFOLG PIXEL FÜR PIXEL - IHRE MARKE
+          GLÄNZT, SIE SPAREN ZEIT UND <span class="text-primary-yellow">
+            GEWINNEN KUNDEN</span
+          >.
+        </h1>
+        <p class="max-w-[300px]">
+          Wir sind Ara Creation Agency, eine Kreativagentur mit Sitz in der
+          Schweiz.
+        </p>
+        <a href="#services" class="text-primary-yellow uppercase">
+          Mehr entdecken</a
+        >
+      </div>
+    </div>
+  </header>
+  <main>
+    <h2
+      class="font-poppins text-2xl font-bold tracking-tight md:text-5xl text-center py-8 md:py-24"
+    >
+      Heben Sie Ihre Marke mit unseren kreativen Lösungen hervor
+    </h2>
+    <section id="services">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 items-center text-white transition-all duration-500 w-full h-fit"
+        id="tracked-section-container"
+      >
+        <div
+          class="top-0 z-10 h-full w-full items-center bg-[#F1F1F1] block md:sticky md:min-h-[700px]"
+        >
+          <Image
+            src={BBWebsite}
+            alt="Modern web design"
+            class="h-full min-h-[300px] w-full object-cover"
+            width="754"
+            height="414"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div
+          class="mx-auto flex max-w-[600px] flex-col gap-4 px-4 py-24 md:py-8"
+          data-color="#000000"
+          tracked-section
+        >
+          <h2 class="font-poppins text-2xl font-bold uppercase md:text-3xl">
+            WEBENTWICKLUNG & E-COMMERCE
+          </h2>
+          <p>
+            Nutzen Sie die Kraft der digitalen Innovation mit unserem Fachwissen
+            in den Bereichen Webentwicklung und E-Commerce. Von der Gestaltung
+            anspruchsvoller Websites bis zur Optimierung nahtloser Online-Shops
+            - wir unterstützen Ihre Marke dabei, in der digitalen Landschaft mit
+            Präzision und Geschick zu blühen.
+          </p>
+        </div>
+        <div
+          class="top-0 z-20 h-full w-full bg-[#C59921] block md:sticky md:min-h-[700px]"
+        >
+          <Image
+            src={BBGiftcard}
+            alt="Modern web design"
+            class="h-full min-h-[300px] w-full object-cover"
+            width="720"
+            height="500"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div
+          class="mx-auto flex max-w-[600px] flex-col gap-4 px-4 py-24 md:py-8"
+          data-color="#E1B12C"
+          tracked-section
+        >
+          <h2 class="font-poppins text-2xl font-bold uppercase md:text-3xl">
+            GRAPHIC DESIGN & BRANDING
+          </h2>
+          <p>
+            Schaffen Sie eine unverwechselbare Identität mit unserem
+            strategischen Branding- und Design-Know-how. Von der sorgfältigen
+            Logokreation bis zum umfassenden visuellen Branding gestalten wir
+            eine Geschichte, die bei Ihrem Publikum Anklang findet und Vertrauen
+            und Loyalität fördert, die über das Gewöhnliche hinausgeht.
+          </p>
+        </div>
+        <div
+          class="top-0 z-30 h-full w-full bg-[#153084] block md:sticky md:min-h-[700px]"
+        >
+          <Image
+            src={BBGiftcard}
+            alt="Visual content"
+            class="h-full min-h-[300px] w-full object-cover"
+            width="720"
+            height="500"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div
+          class="mx-auto flex max-w-[600px] flex-col gap-4 px-4 py-24 md:py-8"
+          data-color="#153084"
+          tracked-section
+        >
+          <h2 class="font-poppins text-2xl font-bold uppercase md:text-3xl">
+            VISUELLE INHALTE
+          </h2>
+          <p>
+            Erschliessen Sie das Potenzial visueller Geschichten mit unserem
+            kreativen Geist und der Erstellung überzeugender Inhalte. Von
+            fesselnder Videografie bis hin zu massgeschneiderten Illustrationen
+            gestalten wir Erzählungen, die fesseln und inspirieren und sinnvolle
+            Verbindungen schaffen, die Engagement und Wachstum fördern.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#F1F1F1] py-12 md:py-32" id="about-us">
+      <div
+        id="counter"
+        class="mx-auto grid w-full max-w-screen-xl grid-cols-1 gap-16 px-5 sm:grid-cols-2 md:grid-cols-4"
+      >
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center opacity-0 translate-y-10 transition-all duration-300"
+        >
+          <h2
+            class="font-poppins text-primary-yellow text-3xl font-bold uppercase md:text-5xl"
+          >
+            32
+          </h2>
+          <p class="text-xl">Abgeschlossene Projekte</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center opacity-0 translate-y-10 transition-all duration-500"
+        >
+          <h2
+            class="font-poppins text-primary-yellow text-3xl font-bold uppercase md:text-5xl"
+          >
+            15 min
+          </h2>
+          <p class="text-xl">Durchschnittliche Antwortzeit</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center opacity-0 translate-y-10 transition-all duration-700"
+        >
+          <h2
+            class="font-poppins text-primary-yellow text-3xl font-bold uppercase md:text-5xl"
+          >
+            98%
+          </h2>
+          <p class="text-xl">Kundenzufriedenheit</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center opacity-0 translate-y-10 transition-all duration-1000"
+        >
+          <h2
+            class="font-poppins text-primary-yellow text-3xl font-bold uppercase md:text-5xl"
+          >
+            10+
+          </h2>
+          <p class="text-xl">Partner auf der ganzen Welt</p>
+        </div>
+      </div>
+    </section>
+    <section class="py-8 md:py-32">
+      <div
+        id="animated-section1"
+        class="mx-auto grid w-full max-w-screen-xl grid-cols-1 items-center gap-12 px-5 py-16 md:grid-cols-2 md:gap-24"
+      >
+        <div
+          class="flex flex-col gap-8 transition-all duration-700 -translate-x-5 opacity-0"
+        >
+          <h2
+            class="font-poppins text-2xl font-bold tracking-tight md:text-3xl"
+          >
+            Auf Ihre Bedürfnisse zugeschnittene Lösungen
+          </h2>
+          <p>
+            In unserer Agentur erstellen wir jede Lösung von Grund auf neu und
+            passen sie an die einzigartigen Merkmale Ihres Unternehmens an. Wir
+            verwenden keine vorgefertigten Vorlagen. Darüber hinaus garantieren
+            wir ultraschnelle Ladegeschwindigkeiten dank der Top-Server unserer
+            Partner. Ihre Website lädt im Handumdrehen, ohne Kompromisse.
+          </p>
+          <a href="#contact"
+            ><button
+              class="bg-primary-yellow hover:bg-primary-blue w-full min-w-[150px] px-5 py-4 transition-all duration-300 hover:text-white md:w-auto"
+              >Offerte bestellen</button
+            ></a
+          >
+        </div>
+        <Image
+          src={TailoredSolutions}
+          alt="Tailored solutions"
+          class="order-first mx-auto md:order-none transition-all duration-700 translate-x-5 opacity-0"
+          width="398"
+          height="300"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </section>
+    <section class="py-5 md:py-32 w-full py-16 bg-primary-yellow text-center">
+      <h2
+        id="heading1"
+        class="font-poppins text-3xl font-bold uppercase tracking-tight md:text-5xl max-w-screen-xl mx-auto text-center px-5 opacity-0 translate-y-5 transition-all duration-700"
+      >
+        Vertrauen Sie auf die Magie von Ara Creation, um eine <span
+          class="text-white"
+        >
+          herausragende Marke
+        </span> zu schaffen, die mühelos Kunden anlockt.
+      </h2>
+    </section>
+    <section class="bg-[#F1F1F1] py-8 md:py-32">
+      <div
+        id="animated-section2"
+        class="mx-auto grid w-full max-w-screen-xl grid-cols-1 items-center gap-12 px-5 py-16 md:grid-cols-2 md:gap-24"
+      >
+        <Image
+          src={Boxes}
+          alt="Delivery of services"
+          class="mx-auto transition-all duration-700 -translate-x-5 opacity-0"
+          width="270"
+          height="300"
+          loading="lazy"
+          decoding="async"
+        />
+        <div
+          class="flex flex-col gap-8 transition-all duration-700 translate-x-5 opacity-0"
+        >
+          <h2
+            class="font-poppins text-2xl font-bold tracking-tight md:text-3xl"
+          >
+            Höchste Qualität der erbrachten Dienstleistungen
+          </h2>
+          <p>
+            Wir arbeiten mit Unternehmen aus der ganzen Welt zusammen, die aus
+            unterschiedlichen Bereichen kommen, die mit dem Aufbau und der
+            Entwicklung des Markenimages von Unternehmen jeder Grösse zu tun
+            haben. Deshalb ergänzen wir uns perfekt und gewährleisten die
+            Erbringung von Dienstleistungen höchster Qualität.
+          </p>
+          <a href="#contact"
+            ><button
+              class="bg-primary-yellow hover:bg-primary-blue w-full min-w-[150px] px-5 py-4 transition-all duration-300 hover:text-white md:w-auto"
+              >Partner werden</button
+            ></a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="py-8 md:py-32 animated-section">
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-16">
+        <h2 class="font-poppins text-2xl font-bold tracking-tight md:text-3xl">
+          Sehen Sie, was unsere Kunden sagen
+        </h2>
+        <div
+          class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-16"
+          id="feedback-cards"
+        >
+          <div
+            class="flex flex-col gap-8 bg-[#F1F1F1] px-10 py-12 transition-all duration-500 translate-y-10"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              congue felis ac lorem cursus, at efficitur lacus iaculis.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Nulla congue
+              felis ac lorem cursus, at efficitur lacus iaculis.
+            </p>
+            <div>
+              <p
+                class="font-poppins text-primary-yellow mb-2 text-xl font-bold uppercase"
+              >
+                John Smith
+              </p>
+              <p>CEO & Founder</p>
+              <p>John's Bakery</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-8 bg-[#F1F1F1] px-10 py-12 transition-all duration-700 translate-y-10"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              congue felis ac lorem cursus, at efficitur lacus iaculis.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Nulla congue
+              felis ac lorem cursus, at efficitur lacus iaculis.
+            </p>
+            <div>
+              <p
+                class="font-poppins text-primary-yellow mb-2 text-xl font-bold uppercase"
+              >
+                Emily Frey
+              </p>
+              <p>CEO</p>
+              <p>Emil Frey Automobile</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-8 bg-[#F1F1F1] px-10 py-12 transition-all duration-1000 translate-y-10"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              congue felis ac lorem cursus, at efficitur lacus iaculis.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Nulla congue
+              felis ac lorem cursus, at efficitur lacus iaculis.
+            </p>
+            <div>
+              <p
+                class="font-poppins text-primary-yellow mb-2 text-xl font-bold uppercase"
+              >
+                Berisha Asani
+              </p>
+              <p>Founder</p>
+              <p>Papa's Pizza</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#F1F1F1] py-8 md:py-32">
+      <div class="mx-auto w-full max-w-screen-xl px-5 pb-16">
+        <h2 class="font-poppins text-2xl font-bold tracking-tight md:text-3xl">
+          Unsere Werke
+        </h2>
+        <div
+          class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-4 h-96"
+          id="work-cards"
+        >
+          <div
+            class="bg-white transition-all duration-500 translate-y-10 h-full w-full"
+          >
+            <Image
+              src={BBCards}
+              alt=""
+              class="object-cover w-full h-full"
+              width="1200"
+              height="630"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div
+            class="bg-white transition-all duration-500 translate-y-10 h-full w-full"
+          >
+            <Image
+              src={BBCards}
+              alt=""
+              class="object-cover w-full h-full"
+              width="1200"
+              height="630"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div
+            class="bg-white transition-all duration-500 translate-y-10 h-full w-full"
+          >
+            <Image
+              src={BBCards}
+              alt=""
+              class="object-cover w-full h-full"
+              width="1200"
+              height="630"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 md:py-32 w-full py-16 bg-primary-yellow text-center">
+      <h2
+        id="heading2"
+        class="font-poppins text-3xl font-bold uppercase tracking-tight md:text-5xl max-w-screen-xl mx-auto text-center px-5 opacity-0 translate-y-5 transition-all duration-700"
+      >
+        Warum sich mit dem Durchschnittlichen zufrieden geben? <span
+          class="text-white"
+        >
+          Ara Creation
+        </span> liefert das Aussergewöhnliche.
+      </h2>
+    </section>
+    <section class="bg-[#F1F1F1] py-8 md:py-32 animated-section">
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-16">
+        <h2 class="font-poppins text-2xl font-bold tracking-tight md:text-3xl">
+          Nur ein paar einfache Schritte, um in den vollen Genuss unserer
+          Vorteile zu kommen
+        </h2>
+        <div
+          id="steps"
+          class="mt-16 grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <div
+            class="flex flex-col gap-8 transition-all duration-300 opacity-0 translate-y-10"
+          >
+            <p
+              class="text-primary-yellow font-poppins border-primary-yellow grid h-24 w-24 items-center self-start rounded-full border border-4 text-center text-5xl font-bold"
+            >
+              1
+            </p>
+            <p class="font-poppins text-xl font-bold uppercase tracking-tight">
+              Erstes Briefing
+            </p>
+            <p>
+              Wir sprechen über Ihre Ziele und analysieren vorab den Umfang
+              unserer Zusammenarbeit.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-8 transition-all duration-500 opacity-0 translate-y-10"
+          >
+            <p
+              class="text-primary-yellow font-poppins border-primary-yellow grid h-24 w-24 items-center self-start rounded-full border border-4 text-center text-5xl font-bold"
+            >
+              2
+            </p>
+            <p class="font-poppins text-xl font-bold uppercase tracking-tight">
+              Konzept der Massnahmen
+            </p>
+            <p>
+              In dieser Phase überprüfen wir sorgfältig die zuvor besprochenen
+              Ziele und sammeln die notwendigen Informationen.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-8 transition-all duration-700 opacity-0 translate-y-10"
+          >
+            <p
+              class="text-primary-yellow font-poppins border-primary-yellow grid h-24 w-24 items-center self-start rounded-full border border-4 text-center text-5xl font-bold"
+            >
+              3
+            </p>
+            <p class="font-poppins text-xl font-bold uppercase">
+              Beginn der Zusammenarbeit
+            </p>
+            <p>
+              Mit einem kompletten Satz an Materialien beginnen wir mit unserer
+              Arbeit.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-8 transition-all duration-1000 opacity-0 translate-y-10"
+          >
+            <p
+              class="text-primary-yellow font-poppins border-primary-yellow grid h-24 w-24 items-center self-start rounded-full border border-4 text-center text-5xl font-bold"
+            >
+              4
+            </p>
+            <p class="font-poppins text-xl font-bold uppercase tracking-tight">
+              Iteration
+            </p>
+            <p>
+              Es kann vorkommen, dass unsere ersten Entwürfe nicht mit Ihren
+              Vorstellungen übereinstimmen, deshalb bieten wir genügend
+              Wiederholungsrunden an, um das gewünschte Ergebnis zu erzielen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mx-auto w-full max-w-screen-xl py-24 md:py-32" id="contact">
+      <div
+        class="flex flex-col items-center justify-between gap-12 px-5 md:gap-32 lg:flex-row"
+        id="contact-form"
+      >
+        <div
+          class="flex w-full flex-col gap-12 opacity-0 -translate-x-5 transition-all duration-700"
+        >
+          <h2
+            class="font-poppins text-2xl font-bold tracking-tight md:text-3xl"
+          >
+            Lassen Sie uns Ihre Marke hervorheben
+          </h2>
+          <div class="flex flex-col gap-3">
+            <p>
+              Erzählen Sie uns von Ihrem Unternehmen, Ihren bisherigen
+              Marketingbemühungen und -bedürfnissen, und wir werden Ihnen
+              Lösungen vorschlagen, die für Ihr Unternehmen von Nutzen sein
+              können.
+            </p>
+            <p>
+              Wir erklären Ihnen, welche Möglichkeiten es gibt, wie wir arbeiten
+              und beantworten alle Ihre Fragen. Wenn Sie zu dem Schluss kommen,
+              dass sie sinnvoll sind, werden wir Ihnen bei der Umsetzung helfen.
+              Nachdem Sie das Formular ausgefüllt haben, werden wir Sie
+              kontaktieren.
+            </p>
+          </div>
+          <Image
+            src={Contact}
+            alt="Contact us"
+            loading="lazy"
+            class="mx-auto py-8"
+            width="317"
+            height="200"
+            decoding="async"
+          />
+        </div>
+        <div class="opacity-0 translate-x-5 transition-all duration-700 w-full">
+          <ContactFormDE />
+        </div>
+      </div>
+    </section>
+  </main>
 </LayoutDE>
+
+<script src="../../scripts/main.js"></script>

@@ -1,9 +1,8 @@
 ---
-import Footer from "../components/Footer.astro"
-import Loader from "../components/Loader.astro"
-import Navbar from "../components/Navbar.astro"
-import QuickActions from "../components/QuickActions.astro"
-import "../styles/global.css"
+import Footer from "../components/Footer.astro";
+import Loader from "../components/Loader.astro";
+import QuickActions from "../components/QuickActions.astro";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -36,10 +35,10 @@ import "../styles/global.css"
   </head>
   <body>
     <div class="overflow-x-hidden">
-		<Loader/>
-		<QuickActions/>
+      <Loader />
+      <QuickActions />
       <slot />
-      <Footer/>
+      <Footer />
     </div>
   </body>
 </html>

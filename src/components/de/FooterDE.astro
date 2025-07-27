@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import AraLogo from "../../assets/ara-logo.svg";
+---
+
+<footer class="w-full bg-[#F1F1F1]">
+  <div class="max-w-screen-xl mx-auto w-full px-5">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 md:gap-24 pt-24 md:py-32"
+    >
+      <div class="w-full h-full">
+        <Image
+          src={AraLogo}
+          alt="Ara Creation"
+          class="h-full w-auto"
+          width="69"
+          height="53"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div>
+        <h2
+          class="uppercase font-poppins text-2xl tracking-tighter font-bold mb-4"
+        >
+          Kontakt
+        </h2>
+        <p>Ara Creation Agency, Nagulanandan</p>
+        <p>8498 Gibswil, Switzerland</p>
+        <p>contact@aracreationagency.com</p>
+        <p>tel: +41 76 717 14 96</p>
+      </div>
+      <div>
+        <h2
+          class="uppercase font-poppins text-2xl tracking-tighter font-bold mb-4"
+        >
+          Info
+        </h2>
+        <a href="/privacy-policy" class="block hover:text-primary-blue"
+          >Datenschutzbestimmungen</a
+        >
+        <a href="/legal" class="block hover:text-primary-blue">Impressum</a>
+      </div>
+    </div>
+    <p class="pt-16 pb-4 mx-auto text-center">
+      © 2025 aracreationagency.com | Ara Creation Agency, Nagulanandan
+    </p>
+  </div>
+</footer>

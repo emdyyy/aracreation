@@ -1,5 +1,8 @@
 ---
-import "../styles/global.css"
+import FooterDE from "../components/de/FooterDE.astro";
+import Loader from "../components/Loader.astro";
+import QuickActions from "../components/QuickActions.astro";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -45,7 +48,12 @@ import "../styles/global.css"
     />
   </head>
   <body>
-    <slot />
+    <div class="overflow-x-hidden">
+      <Loader />
+      <QuickActions />
+      <slot />
+      <FooterDE />
+    </div>
   </body>
 </html>
 
